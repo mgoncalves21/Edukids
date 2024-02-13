@@ -1,0 +1,14 @@
+<!-- zone-overlay.component.html -->
+<div *ngIf="zone" class="zone-overlay" [style.left.px]="zone.x" [style.top.px]="zone.y">
+  <div class="title-container">
+    {{ zone.title }}
+  </div>
+  <div class="list-item-container">
+    <div *ngFor="let subject of subjectsForCurrentZone" class="item">
+      <div class="label">{{ subject }}</div>
+    </div>
+  </div>
+</div>
+// zone-overlay.component.scss
+
+```

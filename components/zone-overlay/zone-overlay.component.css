@@ -1,0 +1,27 @@
+/* zone-overlay.component.css */
+.zone-overlay {
+  position: absolute;
+  pointer-events: none;
+  background-color: white; /* Exemple de fond */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.title-container {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list-item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin-bottom: 5px;
+}
+
+.label {
+
+}

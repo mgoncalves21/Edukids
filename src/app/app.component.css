@@ -1,0 +1,27 @@
+.hover-circle:hover {
+  stroke-opacity: 0.7; /* Rend la bordure plus visible au survol */
+  fill-opacity: 0.3; /* Ajoute un léger remplissage pour surligner */
+  fill: #ffc200; /* Choisissez une couleur de remplissage pour le surlignage */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Empêche le défilement sur la page */
+  width: 100%; /* Assure que le corps prend toute la largeur */
+  height: 100%; /* Assure que le corps prend toute la hauteur */
+}
+.ile-container {
+  position: relative;
+  width: 100vw; /* prend toute la largeur de la fenêtre de visualisation */
+  height: 100vh; /* prend toute la hauteur de la fenêtre de visualisation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100vh;
+  position: absolute; /* ou 'fixed' selon le besoin */
+}
+
