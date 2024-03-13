@@ -1,0 +1,116 @@
+/* Flexbox pour le positionnement principal */
+.zone-details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .zone-details-container {
+    width: 100%; /* Occupe 100% de la largeur sur les petits écrans */
+    margin-left: 0; /* Annule le décalage à gauche */
+  }
+}
+.zone-details-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.zone-details-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.subject-title {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 5px 10px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-controls button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.subject-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.card-body {
+  padding-top: 10px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-item {
+  background: #eaeaea;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+.sticker {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 0.5em; /* Bordures arrondies pour l'effet sticker */
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Une légère ombre pour un effet de profondeur */
+  margin-left: 10px;
+  text-transform: uppercase; /* Le texte en majuscules est souvent utilisé pour les stickers */
+}
+
+.validated {
+  background-color: #4CAF50; /* Vert pour les compétences validées */
+}
+
+.not-start {
+  background-color: #FF9800; /* Orange pour les compétences en cours d'évaluation */
+}
+
+.evaluation-in-progress {
+  background-color: #2196F3; /* Bleu pour l'indication "Évaluation en cours" */
+}
+
+.skill-item {
+  margin-bottom: 10px; /* Ajoute de l'espace entre les éléments de la liste */
+}
+.zone-details-content {
+  display: flex;
+  justify-content: center; /* Centrer les cartes horizontalement */
+  width: 100%;
+}

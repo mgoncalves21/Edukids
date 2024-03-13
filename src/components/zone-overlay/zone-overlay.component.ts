@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
@@ -25,5 +25,9 @@ export class ZoneOverlayComponent {
   get subjectsForCurrentZone(): string[] {
     if (!this.zone) return [];
     return this.zoneSubjects[this.zone.title as keyof typeof this.zoneSubjects] || [];
+  }
+
+  log() {
+    console.log(this.zone);
   }
 }

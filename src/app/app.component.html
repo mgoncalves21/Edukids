@@ -1,9 +1,14 @@
-<div class="ile-container">
-  <svg #svgRoot viewBox="0 0 1024 1024" style="position: absolute; top: 0; left: 0;">
-    <image href="assets/isle.webp" width="1024" height="1024"/>
-    <circle id="mountainCircle" data-title="Mountain" cx="518" cy="177" r="108" fill="transparent" (mouseleave)="resetHighlight()" (mouseenter)="highlight('mountainCircle')" class="hover-circle"/>
-    <circle id="forestCircle" data-title="Forest" cx="447" cy="420" r="95" fill="transparent" (mouseleave)="resetHighlight()" (mouseenter)="highlight('forestCircle')" class="hover-circle"/>
-    <circle id="beachCircle" data-title="Beach" cx="594" cy="621" r="107" fill="transparent" (mouseleave)="resetHighlight()" (mouseenter)="highlight('beachCircle')" class="hover-circle"/>
-  </svg>
-  <app-zone-overlay *ngIf="isHovered" [zone]="currentZone"></app-zone-overlay>
+<div class="page-container">
+  <div class="ile-container">
+    <svg #svgRoot viewBox="0 0 1024 1024">
+      <image class="img-selector" href="assets/isle-removebg.png" width="1024" height="1024"/>
+      <circle  id="mountainCircle" data-title="Mountain" cx="518" cy="177" r="108" fill="transparent" (click)="selectZone('mountainCircle')" (mouseout)="resetHighlight()" (mouseover)="highlight('mountainCircle')" class="hover-circle"/>
+        <circle id="forestCircle" data-title="Forest" cx="447" cy="420" r="95" fill="transparent" (click)="selectZone('forestCircle')" (mouseleave)="resetHighlight()" (mouseenter)="highlight('forestCircle')" class="hover-circle"/>
+      <circle id="beachCircle" data-title="Beach" cx="594" cy="621" r="107" fill="transparent" (click)="selectZone('beachCircle')"  (mouseleave)="resetHighlight()" (mouseenter)="highlight('beachCircle')" class="hover-circle"/>
+    </svg>
+    <app-zone-overlay [zone]="currentZone"></app-zone-overlay>
+  </div>
+  <div class="zone-detail-container">
+    <app-zone-details [zoneData]="selectedZoneDetails"></app-zone-details>
+  </div>
 </div>

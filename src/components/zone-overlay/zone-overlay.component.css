@@ -1,0 +1,35 @@
+/* zone-overlay.component.css */
+.zone-overlay {
+  position: absolute;
+  background-color: #F0F8FF; /* Fond lavande clair */
+  color: #333; /* Couleur de texte foncée pour contraste */
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 150px;
+  border: 1px solid #D3D3D3;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  pointer-events: none;
+}
+
+.title-container {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  color: #4B0082; /* Indigo pour le titre */
+}
+
+.list-item-container, .item {
+  background-color: #E6E6FA; /* Fond lavande pour le conteneur d'éléments */
+  border-radius: 10px;
+}
+
+.item {
+  background-color: #FFFFFF; /* Fond blanc pour les items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.label {
+  font-size: 1.1em;
+}

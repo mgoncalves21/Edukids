@@ -1,0 +1,27 @@
+<div *ngIf="zoneData" class="zone-details-container">
+  <h1 class="zone-details-title">Mes compétences</h1>
+  <div class="zone-details-content">
+    <div *ngFor="let subject of paginatedSubjects" class="zone-details-card">
+      <div class="card-header">
+        <h2 class="subject-title">{{ subject.name }}</h2>
+        <img class="subject-icon" [src]="subject.urlIcon" alt="{{ subject.name }}">
+      </div>
+      <div class="card-body">
+        <ul class="skills-list">
+          <li *ngFor="let skill of subject.skills" class="skill-item">
+            {{ skill.name }}
+            <span class="skill-status sticker" [ngClass]="{'validated': skill.status === 'validé', 'not-start':skill.status === 'non commencé', 'evaluation-in-progress': skill.status.startsWith('en cours')}">
+              {{ skill.status }}
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="pagination-controls">
+    <button (click)="changePage(-1)" [disabled]="currentPage <= 0">Précédent</button>
+    <span>Page {{ currentPage + 1 }}</span>
+    <button (click)="changePage(1)" [disabled]="currentPage >= getMaxPages() - 1">Suivant</button>
+  </div>
+
+</div>
